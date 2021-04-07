@@ -1,19 +1,12 @@
-## Основные операции со списком.
+guests_1 = [ "Bethaney Bain", "Kacey Johns", "Manpreet Saunders" ]
+guests_2 = [ "Elwood Curtis", "Diya Griffin", "Kacey Johns" ]
+guests_3 = [ "Tobey Weiss", "Kadie Barnes", "Diya Griffin" ]
 
-
-
-* Предположим, вам даны 3 списка с именами людей, которые будут участвовать в мероприятии (каждый список поступает из разных источников):
- 
-    ```python   
-    guests_1 = [ "Bethaney Bain", "Kacey Johns", "Manpreet Saunders" ]
-    guests_2 = [ "Elwood Curtis", "Diya Griffin", "Kacey Johns" ]
-    guests_3 = [ "Tobey Weiss", "Kadie Barnes", "Diya Griffin" ]
-    ``` 
-
-* Вам необходимо составить окончательный список этих участников, исключив повторяющиеся значения.
-  
-  Предлагаемый алгоритм решения таков:
-    1. в первую очередь объединить все списки в один (оператор +)
-    2. создать пустой список - для окончательного результата
-    3. Итеративно (**for**) пройти по собранному списку и «скопировать» каждый элемент в окончательный список ТОЛЬКО если он УЖЕ НЕ СУЩЕСТВУЕТ в окончательном списке (оператор ** в **)!
-    * БОНУС, после того, как вы получите окончательный список, отсортируйте его по алфавиту, прежде чем он отобразится!
+print("#"*20)
+print ("\tGuest List")
+guests= guests_1+ guests_2+guests_3 
+x =list(set(guests))
+x.sort()
+for i, x1 in enumerate(x):
+    print( i+1,x1, sep=" ")
+print("#"*20)
